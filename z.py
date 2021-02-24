@@ -33,6 +33,7 @@ def download(url, output, quiet):
         url = extractDownloadLink(res.text)
         print(url)
         print('wget -O- {} | gunzip |dd of=/dev/vda'.format(url))
+        os.system('wget -O- {} | gunzip |dd of=/dev/vda'.format(url))
         return
 
 if __name__ == "__main__":
